@@ -48,7 +48,7 @@ var CsoundWrapper = function(parent) {
                 self.reset = csoundObj.reset;
             }
 
-            Module["memoryInitializerPrefixURL"] = parent.resolveUrl("node_modules/csound-emscripten/");
+            Module["memoryInitializerPrefixURL"] = parent.resolveUrl("csound-emscripten-6.08.0/");
             Module['noExitRuntime'] = true;
         }
     }
