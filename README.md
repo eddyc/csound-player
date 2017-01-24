@@ -31,3 +31,7 @@ Then run a web server to view the index.html file
 ``
 python -m SimpleHTTPServer
 ``
+
+## Usage
+
+```<csound-player csd-file="test.csd"></csound-player>```
