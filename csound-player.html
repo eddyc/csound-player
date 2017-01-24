@@ -1,0 +1,70 @@
+<link rel="import" href="node_modules/@polymer/polymer/polymer.html">
+<link rel="import" href="node_modules/polymer-bootstrap/polymer-bootstrap.html">
+<link rel="import" href="node_modules/polymer-bootstrap/polymer-bootstrap-theme.html">
+<link rel="import" href="csound-engine.html">
+
+
+<script src="node_modules/ace-builds/src/ace.js"></script>
+<script src="node_modules/split.js/split.min.js"></script>
+
+<dom-module id="csound-player">
+    <template>
+
+    <style include="polymer-bootstrap"></style>
+    <style include="polymer-bootstrap-theme"></style>
+    <style type="text/css" media="screen">
+
+    h1, h2, h3, h4, h5, h6, button {
+        font-family: 'Helvetica Neue';
+    }
+
+
+    #panel {
+
+        height:50em;
+    }
+    #editor {
+        height:0px;
+        border:1px solid;
+        border-color: #ddd;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow:auto;
+    }
+
+    #output {
+        height:0px;
+        border:1px solid;
+        border-color: #ddd;
+    }
+
+    #editor-container {
+        width: 100%;
+        height:calc(100% - 50px);
+    }
+    </style>
+
+    <csound-engine id="csoundEngine"></csound-engine>
+
+    <div id="panel" class="panel panel-default">
+
+        <div class="panel-heading clearfix">
+            <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Csound Player</h4>
+            <div class="btn-group pull-right">
+                <button id="PlayButton" type="button" class="btn btn-default btn-sm">Play</button>
+                <button id="ResetButton" type="button" class="btn btn-default btn-sm">Reset</button>
+                <button id="ClearConsole" type="button" class="btn btn-default btn-sm">Clear Console</button>
+            </div>
+        </div>
+        <div class="panel-body" id="editor-container">
+            <div id="editor"></div>
+            <div id="output"></div>
+        </div>
+    </div>
+</div>
+</template>
+</dom-module>
+
+<script type="text/javascript" src="csound-player.js"></script>

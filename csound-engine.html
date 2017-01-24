@@ -1,0 +1,26 @@
+<link rel="import" href="node_modules/@polymer/polymer/polymer.html">
+
+<script src="csound-emscripten-6.08.0/javascripts/FileManager.js" charset="utf-8"></script>
+<script src="CsoundWrapper.js" charset="utf-8"></script>
+<dom-module id="csound-engine">
+    <template>
+    <style media="screen">
+    .invisible {
+
+        height:0;
+        visibility:hidden;/*display: none;*/
+    }
+    .small {
+        position: absolute;
+        width:0%;
+        height:0%;
+    }
+    </style>
+
+    <div id="console" class="invisible"></div>
+    <div id="mess" class="invisible"></div>
+    <div id="engine" class="small"></div>
+</template>
+</dom-module>
+
+<script type="text/javascript" src="csound-engine.js"></script>
